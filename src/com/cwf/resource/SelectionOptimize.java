@@ -1,20 +1,11 @@
-package com.cwf;
+package com.cwf.resource;
 
-import java.util.Arrays;
-import java.util.Random;
+import com.cwf.util.SortUtil;
 
 public class SelectionOptimize {
 
     public static void main(String[] args) {
-        int arr[] =SortUtil.randomArr(1000);
-        //拷贝一份用于验证
-        int[] copy = Arrays.copyOf(arr, arr.length);
-        // 用自己实现的算法排序
-        selectionSort(arr);
-        //用arrays工具类对复制的数组排序
-        Arrays.sort(copy);
-        //验证
-        System.out.println(SortUtil.matcher(copy, arr));
+        SortUtil.check(SelectionOptimize.class,"selectionSort");
     }
 
     public static  void selectionSort(int[] arr){
@@ -36,7 +27,7 @@ public class SelectionOptimize {
             } else if(max_pos!=min_pos){//防止最小位置交换后 又换回来
                 SortUtil.swap(arr,arr.length-j-1,max_pos);
             }
-            System.out.println("经过第"+(j+1)+"次循环最小位置是："+min_pos+"最大位置是："+max_pos+"  结果是："+ Arrays.toString(arr));
+//            System.out.println("经过第"+(j+1)+"次循环最小位置是："+min_pos+"最大位置是："+max_pos+"  结果是："+ Arrays.toString(arr));
         }
     }
 

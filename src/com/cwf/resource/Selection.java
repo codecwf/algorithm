@@ -1,11 +1,14 @@
-package com.cwf;
+package com.cwf.resource;
 
-import java.util.Arrays;
+import com.cwf.util.SortUtil;
 
 public class Selection {
-    //选择排序算法
     public static void main(String[] args) {
-        int[] arr={2,9,5,7,8,0,1,3,4,6};
+        SortUtil.check(Selection.class,"selection");
+    }
+
+    //选择排序算法
+    public static void selection(int[] arr) {
         int min_pos=0;
         for (int j=0;j<arr.length-1;j++ ){
             min_pos=j;
@@ -18,8 +21,8 @@ public class Selection {
             int temp= arr[j];
             arr[j]=arr[min_pos];
             arr[min_pos] = temp;
-            System.out.println("经过第"+(j+1)+"次循环最小位置是："+min_pos+"  结果是："+ Arrays.toString(arr));
+//            System.out.println("经过第"+(j+1)+"次循环最小位置是："+min_pos+"  结果是："+ Arrays.toString(arr));
         }
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
     }
 }
