@@ -5,7 +5,7 @@ import com.cwf.util.SortUtil;
 public class SelectionOptimize {
 
     public static void main(String[] args) {
-        SortUtil.check(SelectionOptimize.class,"selectionSort");
+        System.out.println(SortUtil.check(SelectionOptimize.class, "selectionSort"));
     }
 
     public static  void selectionSort(int[] arr){
