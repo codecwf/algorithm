@@ -47,7 +47,7 @@ public class SortUtil {
 
 
     //检查
-    public  static  void  check(Class sortClass,String sortMethodName)   {
+    public  static  Boolean  check(Class sortClass,String sortMethodName)   {
         try {
             int arr[] = SortUtil.randomArr(1000);
             //拷贝一份用于验证
@@ -57,12 +57,12 @@ public class SortUtil {
             sort.invoke(arr.getClass(),arr);
             //用arrays工具类对复制的数组排序
             Arrays.sort(copy);
-            //打印验证解果
-            System.out.println(SortUtil.matcher(copy, arr));
+            //返回结果
+            return SortUtil.matcher(copy, arr);
         }catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e){
             e.printStackTrace();
+            return  false;
         }
-
     }
 
 

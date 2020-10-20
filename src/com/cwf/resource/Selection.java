@@ -4,7 +4,7 @@ import com.cwf.util.SortUtil;
 
 public class Selection {
     public static void main(String[] args) {
-        SortUtil.check(Selection.class,"selection");
+        System.out.println(SortUtil.check(Selection.class, "selection"));
     }
 
     //选择排序算法
